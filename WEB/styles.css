@@ -4,6 +4,8 @@
 }
 body{
     font-family: 'Trispace', sans-serif;
+
+    box-sizing: border-box;
 }
 .content{
     max-width: 85%;
@@ -42,6 +44,8 @@ header{
     display: flex;
     justify-content: space-between;
 
+    min-height: 50px;
+
     background-color: rgba(0, 0, 0, 0.5);
 
     border-radius: 10px;
@@ -55,9 +59,18 @@ header{
     border-radius: 100%;
 }
 .header__left__nav__elem{
-    padding: 10px 23px;
+    margin: 10px 20px;
 
     color: white;
+
+    transition: linear 0.2s;
+
+    cursor: pointer;
+
+    border-bottom: gray hidden 2px;
+}
+.header__left__nav__elem:hover{
+    border-bottom: #fff solid 2px;
 }
 .header__menu__icon{
     display: flex;
@@ -81,7 +94,7 @@ header{
 
     margin: auto;
 
-    padding: 80px;
+    padding: 70px 0;
 
     text-align: center;
 }
@@ -96,13 +109,21 @@ header{
     padding: 5px 10px;
 
     border-radius: 46px;
+
+    cursor: pointer;
 }
 .header__registration__block__signIn{
+    background: none;
+    
     color: white;
 
     font-size: 11px;
 
     margin-top: 10px;
+
+    border: none;
+
+    cursor: pointer;
 }
 .about{
     min-height: 100vh;
