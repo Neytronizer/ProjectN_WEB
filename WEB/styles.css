@@ -184,14 +184,31 @@ header{
 
     height: 350px;
 }
-.about__screenshots__screenshot{
+.about__screenshots__slider__items{
+    display: flex;
+    flex-wrap: nowrap;
+    
+    overflow: hidden;
+}
+.about__screenshots__slider__items__item{
     height: 350px;
-    width: 650px;
+    width: 100%;
+    flex: 0 0 100%;
+}
+.about__screenshots__screenshot{
+    height: 100%;
+    width: 100%;
     background: rgba(84, 84, 84, 0.1);
 }
 .about__screenshots__slider__arrow{
     height: 52px;
     width: 52px;
+    
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
 }
 .about__screenshots__slider__arrow:last-child{
     transform: scaleX(-1);

@@ -67,16 +67,25 @@
             </div>
             <div class="about__screenshots">
                 <div class="about__screenshots__image">
-                    <img class="about__screenshots__slider__arrow" src="./images/sliderArrow.svg" alt="">
-                    <img class="about__screenshots__screenshot"src="" alt="">
-                    <img class="about__screenshots__slider__arrow" src="./images/sliderArrow.svg" alt="">
+                    <button id="SliderArrowLeft" class="about__screenshots__slider__arrow">
+                        <img src="./images/sliderArrow.svg" alt="">
+                    </button>
+                    <div class="about__screenshots__slider__items">
+                        <div class="about__screenshots__slider__items__item">
+                            <img class="about__screenshots__screenshot" src="./images/monkey.jpg" alt="">
+                        </div>
+                        <div class="about__screenshots__slider__items__item">
+                            <img class="about__screenshots__screenshot"src="./images/monkey2.jpg" alt="">
+                        </div>
+                        <div class="about__screenshots__slider__items__item">
+                            <img class="about__screenshots__screenshot"src="" alt="">
+                        </div>
+                    </div>
+                    <button id="SliderArrowRigth" class="about__screenshots__slider__arrow">
+                        <img src="./images/sliderArrow.svg" alt="">
+                    </button>
                 </div>
                 <div class="about__screenshots__slider">
-                    <div class="about__screenshots__slider__elem--active"></div>
-                    <div class="about__screenshots__slider__elem"></div>
-                    <div class="about__screenshots__slider__elem"></div>
-                    <div class="about__screenshots__slider__elem"></div>
-                    <div class="about__screenshots__slider__elem"></div>
                 </div>
             </div>
         </div>
@@ -114,5 +123,6 @@
             </div>
         </div>
     </div>
+<script src="script.js"></script>
 </body>
 </html>
