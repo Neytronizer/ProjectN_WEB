@@ -355,3 +355,34 @@ header{
     font-size: 10px;
     font-weight: 100;
 }
+
+/* USER PROFILE */
+.user__background{
+    position: relative;
+    height: 100vh;
+
+    background: url(./images/ProfileBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.user__profile{
+    width: 60%;
+    height: 50%;
+    margin: auto;
+
+    background-color: rgba(19, 19, 19, 0.84);
+
+    border-radius: 10px;
+}
+.user__profile__inner{
+    padding: 10px;
+}
+.user__profile__inner__header{
+    padding: 15px;
+
+    background-color: rgba(32, 32, 32, 0.9);
+}
+.user__profile__inner__header img{
+    height: 50px;
+    width: 50px;
+}
