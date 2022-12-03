@@ -358,31 +358,107 @@ header{
 
 /* USER PROFILE */
 .user__background{
+    padding-top: 20px;
     position: relative;
     height: 100vh;
 
-    background: url(./images/ProfileBackground.png);
+    background: url(./images/ProfileTheme3.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .user__profile{
-    width: 60%;
-    height: 50%;
+    width: 40%;
     margin: auto;
 
     background-color: rgba(19, 19, 19, 0.84);
 
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .user__profile__inner{
-    padding: 10px;
+    padding: 30px;
 }
 .user__profile__inner__header{
     padding: 15px;
 
     background-color: rgba(32, 32, 32, 0.9);
+    border-radius: 10px;
+    display: flex;
 }
-.user__profile__inner__header img{
-    height: 50px;
-    width: 50px;
+.user__content{
+    margin-bottom: 5px;
+
+    padding-left: 45px;
+    padding-top: 25px;
+    
+    flex-direction: bottom;
+}
+
+.profile__picture{
+    background-image: url(./images/ProfilePicture.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 167px;
+    height: 167px;
+    border-radius: 300px;
+}
+.user__name{
+    color: rgb(105, 188, 226);
+    font-size: larger;
+}
+.user__online{
+    font-size: x-small;
+    color: rgba(152, 152, 152, 1);
+    text-align: center;
+}
+.user__REP{
+    color: white;
+    font-weight: 200;
+    font-size: larger;
+}
+
+.user__profile__inner__about{
+    margin-top: 5px;
+    background-color: rgba(32, 32, 32, 0.9);
+    border-radius: 10px;
+    color: white;
+}
+.user__profile__inner__about__title{
+    padding-top: 5px;
+    font-size: medium;
+    text-align: center;
+}
+.user__about_line{
+    border-bottom: 1px solid #616161;
+    padding: 0.5px 0;
+    width: 100%;
+    margin: auto;
+}
+.user__about__text{
+    padding: 15px;
+}
+.user__profile__inner__statistics{
+    margin-top: 5px;
+    background-color: rgba(32, 32, 32, 0.9);
+    border-radius: 10px;
+    color: white;
+}
+.user__profile__inner__statistics__title{
+    padding-top: 5px;
+    font-size: medium;
+    text-align: center;
+}
+.user__profile__inner__statistics__content{
+    color:#fff;
+    padding:10px;
+    font-size: large;
+}
+.user__profile__inner__statistics__content__date__numbers{
+    font-size: small;
+    color:#ff9999;
+}
+.user__profile__inner__statistics__content__region__location{
+    font-size: small;
+    color:#ff9999;
 }
