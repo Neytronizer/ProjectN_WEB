@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Trispace', sans-serif;
+
+    box-sizing: border-box;
+}
+.content{
+    max-width: 85%;
+
+    margin: 0 auto;
+}
+header{
+    min-height: 100vh;
+
+    background-image: url(../images/HeaderBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.header{
+    display: flex;
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start;
+}
+.header__left{
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+
+    gap: 10px;
+
+    text-transform: uppercase;
+
+    border-radius: 10px;
+}
+.header__left__nav{
+    display: flex;
+    justify-content: space-between;
+
+    min-height: 50px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: 400;
+}
+.header__left__nav__icon{
+    width: 86px;
+    height: 86px;
+    border-radius: 100%;
+}
+.header__left__nav__elem{
+    margin: 10px 20px;
+
+    color: white;
+
+    transition: linear 0.2s;
+
+    cursor: pointer;
+
+    border-bottom: gray hidden 2px;
+}
+.header__left__nav__elem:hover{
+    border-bottom: #fff solid 2px;
+}
+.header__menu__icon{
+    display: flex;
+    align-items: center;
+
+    width: 30px;
+    height: 22px;
+}
+.header__registration{
+    width: 300px;
+    
+    margin: 250px auto 0;
+
+    background-color: black;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.5) 100%);
+
+    border-radius: 50px;
+}
+.header__registration__block{
+    width: 130px;
+
+    margin: auto;
+
+    padding: 70px 0;
+
+    text-align: center;
+}
+.header__registration__block__signUp{
+    background-color: white;
+
+    text-transform: uppercase;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    padding: 5px 10px;
+
+    border-radius: 46px;
+
+    cursor: pointer;
+}
+.header__registration__block__signIn{
+    background: none;
+    
+    color: white;
+
+    font-size: 11px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    cursor: pointer;
+}
+.about{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+
+    margin: auto;
+    padding-bottom: 100px;
+
+    background-image: url(../images/AboutBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about__title{
+    display: flex;
+    justify-content: center;
+    
+    margin: auto;
+
+    padding-top: 150px;
+
+    text-transform: uppercase;
+}
+.about__title__inner{
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    font-weight: 400;
+    font-size: 40px;
+}
+.about__title__inner img{
+    width: 200px;
+    height: 200px;
+}
+.about__description{
+    margin-top: 100px;
+    
+    background: linear-gradient(180deg, rgba(19, 19, 19, 1) 40%, rgba(19, 19, 19, 0.5) 100%);
+
+    border-radius: 50px;
+    padding: 10px;
+}
+.about__description p{
+    font-size: 18px;
+    font-weight: 350;
+    padding: 20px;
+}
+.about__screenshots{
+    margin-top: 90px;
+}
+.about__screenshots__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    height: 350px;
+}
+.about__screenshots__slider__items{
+    display: flex;
+    flex-wrap: nowrap;
+    
+    overflow: hidden;
+}
+.about__screenshots__slider__items__item{
+    height: 350px;
+    width: 100%;
+    flex: 0 0 100%;
+}
+.about__screenshots__screenshot{
+    height: 100%;
+    width: 100%;
+    background: rgba(84, 84, 84, 0.1);
+}
+.about__screenshots__slider__arrow{
+    height: 52px;
+    width: 52px;
+    
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+}
+.about__screenshots__slider__arrow:last-child{
+    transform: scaleX(-1);
+}
+.about__screenshots__slider{
+    display: flex;
+    align-items: center;
+    
+    height: 20px;
+    width: fit-content;
+
+    margin: 10px auto 0;
+    padding: 0 10px;
+    gap: 10px;
+
+    border-radius: 20px;
+
+    background-color: rgba(97, 97, 97, 0.45);
+}
+.about__screenshots__slider__elem{
+    height: 10px;
+    width: 10px;
+    
+    background-color: gray;
+    border-radius: 100%;
+}
+.about__screenshots__slider__elem--active{
+    height: 10px;
+    width: 10px;
+    
+    background-color: white;
+    border-radius: 100%;
+}
+.article__block{
+    min-height: 200vh;
+    background-image: url(../images/ArticleBlockBackground.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.line{
+    border-bottom: 1px solid #616161;
+    padding: 0.5px 0;
+    width: 95%;
+    margin: auto;
+}
+.article__block__title{
+    color: white;
+
+
+    padding: 125px 0 0;
+
+    font-weight: 400;
+    font-size: 100px;
+
+    text-align: left;
+}
+
+.article__block__elem {
+    min-height: 110px;
+    width: 60%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+
+    background-color: rgba(57, 57, 57, 0.7);
+
+    margin-top: 110px;
+
+    border-radius: 15px;
+    
+}
+.article__block__elem__inner{
+    padding: 15px 20px;
+    width: 100%;
+
+}
+.article__block__elem__list{
+    padding: 15px 30px 0;
+    font-weight: 250;
+}
+.article__block__elem__image{
+    height: 300px;
+    width: 300px;
+
+    background-color: white;
+
+    margin: 100px 0 0 100px;
+}
+
+.article__block__elem__date{
+    display: flex;
+    justify-content: right;
+    font-size: 10px;
+    font-weight: 200;
+}
+.download__block{
+    background-color: black;
+    position: relative;
+    color:white;    
+}
+.download__block__title{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: -25px;
+}
+
+.download__block__title img{
+    width: 175px;
+    height: 175px;
+}
+
+.download__block__download{
+    margin:auto;
+    max-width: max-content;
+    padding: 350px 0;
+}
+.download__block__playsign{
+    font-weight: 400;
+    font-size: 115px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.download__block__button{
+    background-color: rgba(69, 69, 69, 0.57);
+    border-radius: 50px;
+    padding:20px 60px;
+    width: min-content;
+    margin:auto;
+    text-align: center;
+}
+
+.download__block__button h1{
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.download__block__button h5{
+    font-size: 10px;
+    font-weight: 100;
+}
+
+/* USER PROFILE */
+.user__background{
+    padding-top: 20px; 
+    position: relative;
+    height: 100vh;
+
+    background: url(../static/images/ProfileTheme3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.user__profile{
+    width: 40%;
+    margin: auto;
+
+    background-color: rgba(19, 19, 19, 0.84);
+
+    border-radius: 15px;
+}
+.user__profile__inner{
+    padding: 30px;
+}
+.user__profile__inner__header{
+    padding: 15px;
+
+    background-color: rgba(32, 32, 32, 0.9);
+    border-radius: 10px;
+    display: flex;
+}
+.user__content{
+    margin-bottom: 5px;
+
+    padding-left: 45px;
+    padding-top: 25px;
+    
+    flex-direction: bottom;
+}
+
+.profile__picture{
+    background-image: url(../static/images/ProfilePicture.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 167px;
+    height: 167px;
+    border-radius: 300px;
+}
+.user__name{
+    color: rgb(105, 188, 226);
+    font-size: larger;
+}
+.user__online{
+    font-size: x-small;
+    color: rgba(152, 152, 152, 1);
+    text-align: center;
+}
+.user__REP{
+    color: white;
+    font-weight: 200;
+    font-size: larger;
+}
+
+.user__profile__inner__about{
+    margin-top: 5px;
+    background-color: rgba(32, 32, 32, 0.9);
+    border-radius: 10px;
+    color: white;
+}
+.user__profile__inner__about__title{
+    padding-top: 5px;
+    font-size: medium;
+    text-align: center;
+}
+.user__about_line{
+    border-bottom: 1px solid #616161;
+    padding: 0.5px 0;
+    width: 100%;
+    margin: auto;
+}
+.user__about__text{
+    padding: 15px;
+}
+.user__profile__inner__statistics{
+    margin-top: 5px;
+    background-color: rgba(32, 32, 32, 0.9);
+    border-radius: 10px;
+    color: white;
+}
+.user__profile__inner__statistics__title{
+    padding-top: 5px;
+    font-size: medium;
+    text-align: center;
+}
+.user__profile__inner__statistics__content{
+    color:#fff;
+    padding:10px;
+    font-size: large;
+}
+.user__profile__inner__statistics__content__date__numbers{
+    font-size: small;
+    color:#ff9999;
+}
+.user__profile__inner__statistics__content__region__location{
+    font-size: small;
+    color:#ff9999;
+}
