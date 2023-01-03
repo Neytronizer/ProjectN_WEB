@@ -29,9 +29,7 @@ class Coments(db.Model):
         return '<User %r>' % self.username
 
 
-@app.route('/', methods=['POST', 'GET'])
-def mainPage():
-    return render_template('index.html')
+# @app.route('/', methods=['POST', 'GET'])
 # @app.route('/<string:lang>', methods=['POST', 'GET'])
 # def mainPage(lang="langEn"):
 #     admin = Users.query.first()
@@ -139,5 +137,5 @@ def mainPage():
 #                 except:
 #                     return "error"
     
-if __name__ == "__main__":
-    app.run(debug=True, use_reloader=False, host='0.0.0.0')
+# if __name__ == "__main__":
+#     app.run(debug=True, use_reloader=False, host='0.0.0.0')
