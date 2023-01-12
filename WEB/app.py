@@ -18,26 +18,21 @@ class Users(db.Model):
     login = db.Column(db.String(20), unique=True, nullable=False)
     password = db.Column(db.String(20), unique=False, nullable=False)
     nickname = db.Column(db.String(20), unique=False, nullable=False)
-    registrationDate = db.Column(db.DateTime, unique=False, nullable=False, default=datetime.utcnow)
 
 class Coments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     userID = db.Column(db.Integer)
     articleID = db.Column(db.Integer)
 
-    def __repr__(self):
-        return '<User %r>' % self.username
-
-
 @app.route('/', methods=['POST', 'GET'])
 @app.route('/<int:userID>', methods=['POST', 'GET'])
 def mainPage(userID=0):
+    user = Users.query.first()
     if request.method == "POST":
-        users = Users.query.first()
-        user = request.form['login']
+        login = request.form['login']
         password = request.form['password']
-        if users.login == user and users.password == password:
-            return redirect('/admin_panel')
+        if user.login == login and user.password == password:
+            return redirect(f'/{user.id}')
         else:
             return redirect('/')
     else:
