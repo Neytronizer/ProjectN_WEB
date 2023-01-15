@@ -1,0 +1,48 @@
+/* GENERAL */
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(35, 35, 35, 0.5)
+}
+.popup__window{
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    height: 50%;
+    background-color: white;
+
+    margin: auto;
+}
+/* LOGIN */
+.popup__window__close{
+    margin: 5px 5px 0 auto;
+
+    width: fit-content;
+
+    flex: 5%;
+}
+.popup__window__content{
+    margin: auto;
+
+    flex: 100%;
+    display: flex;
+
+    align-items: center;
+}
+.popup__window__content form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    align-items: center;
+}
