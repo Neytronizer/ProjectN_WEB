@@ -21,14 +21,17 @@
     background-color: white;
 
     margin: auto;
+    border-radius: 15px;
 }
 /* LOGIN */
 .popup__window__close{
-    margin: 5px 5px 0 auto;
+    margin: 5px 15px 0 auto;
+    font-size: xx-large;
 
     width: fit-content;
 
     flex: 5%;
+    cursor: pointer;
 }
 .popup__window__content{
     margin: auto;

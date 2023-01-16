@@ -24,13 +24,10 @@
                 </nav>
             </div>
             <div class="header__menu">
+                <div class="header__registration">
+                    <button class="header__registration__login__button">Log in</button>
+                </div>
                 <img class="header__menu__icon" src="../static/images/Menu.png" alt="">
-            </div>
-        </div>
-        <div class="header__registration">
-            <div class="header__registration__block">
-                <button class="header__registration__block__signUp">Sign up</button>
-                <button class="header__registration__block__signIn">or SIGN IN</button>
             </div>
         </div>
     </header>
@@ -102,7 +99,7 @@
             <div class="content">
                 <div class="article__block__elem">
                     <div class="article__block__elem__inner">
-                        <h3 class="article__block__elem__title">OMG NEW APDATE!!1!!1!1!</h3>
+                        <h3 class="article__block__elem__title">NEW UPDATE!</h3>
                         <ul class="article__block__elem__list"> 
                             <li>
                                 <p>New weapons</p>
@@ -125,9 +122,9 @@
             </div>
         </div>
     </div>
-    <div class="popup">
+    <div class="popup" id="popup_login">
         <div class="popup__window">
-            <div class="popup__window__close"><h3>Close</h3></div>
+            <div class="popup__window__close" onclick="togglepopup()">&times;</div>
             <div class="popup__window__content">
                 <form action="" method="post">
                     <input type="text" name="login" id="login" placeholder="login">
