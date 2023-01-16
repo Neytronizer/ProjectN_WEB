@@ -12,17 +12,21 @@ class Articles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50), unique=False, nullable=False)
     text = db.Column(db.Text, unique=False, nullable=False)
+    date = db.Column(db.DateTime, default=datetime.utcnow)
 
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(20), unique=True, nullable=False)
     password = db.Column(db.String(20), unique=False, nullable=False)
     nickname = db.Column(db.String(20), unique=False, nullable=False)
+    about = db.Column(db.String(300), unique=False, nullable=True)
 
 class Coments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     userID = db.Column(db.Integer)
     articleID = db.Column(db.Integer)
+    text = db.Column(db.Text, unique=False, nullable=False)
+    date = db.Column(db.DateTime, default=datetime.utcnow)
 
 @app.route('/', methods=['POST', 'GET'])
 @app.route('/<int:userID>', methods=['POST', 'GET'])
