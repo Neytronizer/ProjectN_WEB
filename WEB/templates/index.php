@@ -1,4 +1,4 @@
-<?
+<?php
     include('..static/php/db_connect.php');
 
     if(isset($_POST["log in"])){
