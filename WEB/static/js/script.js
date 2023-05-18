@@ -49,3 +49,45 @@ ArrowRigth.addEventListener('click', e => {
         allSlides[currentIndex - 1].style.display = "none";
     } 
 });
+
+//text color change
+var element = document.getElementsByClassName('.header__left__nav__elem');
+
+element[0].addEventListener('mouseover', function() {
+    this.style.color = 'blue';
+});
+
+element[0].addEventListener('mouseout', function() {
+    this.style.color = 'white';
+});
+
+var element = document.getElementsByClassName('.header__menu__button');
+
+element[0].addEventListener('mouseover', function() {
+    this.style.color = 'blue';
+});
+
+element[0].addEventListener('mouseout', function() {
+    this.style.color = 'white';
+});
+
+var element = document.getElementsByClassName('.header__menu__login__button');
+
+element[0].addEventListener('mouseover', function() {
+    this.style.color = 'blue';
+});
+
+element[0].addEventListener('mouseout', function() {
+    this.style.color = 'white';
+});
+
+//poput show/hide
+function showPopup() {
+    var popup = document.getElementsByClassName('popup');
+    popup[0].style.display = 'flex'; 
+}
+
+function hidePopup() {
+    var popup = document.getElementsByClassName('popup');
+    popup[0].style.display = 'none';
+}

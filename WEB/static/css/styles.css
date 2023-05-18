@@ -57,22 +57,26 @@ header{
     width: 86px;
     height: 86px;
     border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 .header__left__nav__elem{
     margin: 10px 20px;
     font-weight: 300;
 
     color: white;
 
-    transition: linear 0.2s;
+    transition: linear 0.15s;
 
     cursor: pointer;
 
     border-bottom: gray hidden 2px;
 }
 .header__left__nav__elem:hover{
-    border-bottom: #fff solid 2px;
+color: rgba(29, 140, 165, 1);
+border-bottom: rgba(29, 140, 165, 1) solid 2px;
 }
+
 .header__menu{
     display: flex;
     
@@ -81,18 +85,37 @@ header{
     gap: 20px;
     justify-content: center;
 }
-.header__registration__login__button{
-    border-radius: 30px;
-    border: none;
-    width: 85px;
-    height: 45px;
+
+.header__registration__button{
     cursor: pointer;
-    background-color: rgba(37, 37, 37, 0.37);
-    color: rgba(29, 140, 165, 1);
-    font-size: large;
+    color: white;
+    font-size: medium;
+    text-align: center;
+    padding-top: 10px;
 }
+
+.header__registration__button:hover{
+    color: rgba(29, 140, 165, 1);
+    transition: linear 0.15s;
+}
+
+.header__registration__login__button{
+    cursor: pointer;
+    color: white;
+    font-size: medium;    
+    text-align: center;
+    padding-top: 10px;
+}
+
+.header__registration__login__button:hover
+{
+    color: rgba(29, 140, 165, 1);
+    transition: linear 0.15s;
+}
+
 .header__menu__icon{
-    margin-top: 30px;
+    margin-top: 26px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
 
