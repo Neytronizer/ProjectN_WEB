@@ -1,4 +1,8 @@
-/* GENERAL */
+/* 
+=============================
+GENERAL
+============================= 
+*/
 .popup{
     position: fixed;
     top: 0;
@@ -13,18 +17,25 @@
     background-color: rgba(35, 35, 35, 0.5)
 }
 .popup__window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     display: flex;
     flex-direction: column;
 
-    width: 50%;
+    width: 30%;
     height: 50%;
     background-color: white;
 
     margin: auto;
     border-radius: 15px;
 }
-/* LOGIN */
 .popup__window__close{
+    position: absolute;
+    right: 0;
+
     margin: 5px 15px 0 auto;
     font-size: xx-large;
 
@@ -32,6 +43,34 @@
 
     flex: 5%;
     cursor: pointer;
+}
+.popup__window__input{
+    border: none;
+    border-bottom: solid 2px #000;
+
+    padding: 10px 5px;
+}
+.popup__window__submit{
+    padding: 10px 5px;
+
+    border: none;
+
+    color: #fff;
+    
+    border-radius: 25px;
+    
+    font-size: bold;
+
+    transition: 0.2s linear;
+}
+.submit--blue{
+    background-color: rgb(60, 73, 255);
+}
+.submit--green{
+    background-color: rgb(14, 173, 0);
+}
+.popup__window__submit:hover{
+    padding: 10px 10px;
 }
 .popup__window__content{
     margin: auto;
@@ -46,6 +85,8 @@
     flex-direction: column;
 
     gap: 10px;
+
+    padding: 0 30px;
 
     align-items: center;
 }

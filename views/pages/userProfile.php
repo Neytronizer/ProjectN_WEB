@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Profile</title>
-    <link rel="website icon" type="png" href="./images/profileIcon.png" >
+    <link rel="website icon" type="png" href="/images/Logo.png" >
 </head>
 <body>
     <div class="user__background">

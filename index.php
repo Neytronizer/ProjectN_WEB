@@ -1,28 +1,6 @@
 <?php
     require_once('config/db_connect.php');
-
-    if(isset($_POST["log in"])){
-        $login = $_POST['login'];
-        $password = $_POST['password'];
-
-        if(!$login || !$password){
-           $error = 'Вы не ввели логин или пароль';
-           exit;
-        }
-
-        if(!$error){
-
-            $query = "INSERT INTO 'user' ('id', 'login', 'password') VALUES (NULL, '$login', '$password')";
-            mysqli_query($link, $query);
-            echo 'You were successfully sign up!';
-        }
-        else{
-            echo $error;
-            exit;
-        }
-    }
 ?>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="website icon" type="png" href="/images/Logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>ProjectN</title>
 </head>
 <body>
@@ -48,13 +25,10 @@
                     <h3 class="header__left__nav__elem">Download</h3>
                 </nav>
             </div>
-            <div class="header__menu">
-                <div class="header__registration">
-                    <p class="header__registration__button" onclick="showPopup()">SIGN UP</p>
-                        <p style="color: white; padding: 10px;">or</p>
-                    <p class="header__registration__login__button" onclick="showPopup()">SIGN IN</p>
-                </div>
-                <img class="header__menu__icon" src="/images/Menu.png" alt="">
+            <div class="header__authorization">
+                <h2 class="header__authorization__button" id="loginButton">SIGN UP</h2>
+                    <h2>or</h2>
+                <h2 class="header__authorization__button" id="registrationButton">SIGN IN</h2>
             </div>
         </div>
     </header>
@@ -111,7 +85,7 @@
                             <img class="about__screenshots__screenshot" src="/images/monkey.jpg" alt="">
                         </div>
                         <div class="about__screenshots__slider__items__item">
-                            <img class="about__screenshots__screenshot" src="./images/monkey2.jpg" alt="">
+                            <img class="about__screenshots__screenshot" src="/images/monkey2.jpg" alt="">
                         </div>
                         <div class="about__screenshots__slider__items__item">
                             <img class="about__screenshots__screenshot" src="/images/monkey3.jpg" alt="">
@@ -159,31 +133,8 @@
             </div>
         </div>
     </div>
-    <div class="popup" id="popup_login">
-        <div class="popup__window">
-            <div class="popup__window__close" onclick="hidePopup()">&times;</div>
-            <div class="popup__window__content">
-                <form action="" method="post">
-                    <input type="text" name="login" id="login" placeholder=" Login">
-                    <input type="password" name="password" id="password" placeholder=" Password">
-                    <input type="submit" name="log in" value="   Submit   ">
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="popup" id="popup_registration">
-        <div class="popup__window">
-            <div class="popup__window__close" onclick="hidePopup()">&times;</div>
-            <div class="popup__window__content">
-                <form action="" method="post">
-                    <input type="text" name="login" id="login" placeholder=" Login">
-                    <input type="password" name="password" id="password" placeholder=" Password">
-                    <input type="submit" name="Registrated" value="   Submit   ">
-                </form>
-            </div>
-        </div>
-    </div>
+    <?php include('views/templates/loginPopup.php')?>
+    <?php include('views/templates/registrationPopup.php')?>
     <script src="/js/script.js"></script>
 </body>
-
 </html>
