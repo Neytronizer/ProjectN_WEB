@@ -135,7 +135,7 @@ border-bottom: rgba(29, 140, 165, 1) solid 2px;
     margin: auto;
     padding-bottom: 100px;
 
-    background-image: url(../images/AboutBackground.png);
+    background-image: url(/images/AboutBackground.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -246,7 +246,7 @@ border-bottom: rgba(29, 140, 165, 1) solid 2px;
 .article__block{
 
     min-height: 200vh;
-    background-image: url(../images/ArticleBlockBackground.svg);
+    background-image: url(/images/ArticleBlockBackground.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }

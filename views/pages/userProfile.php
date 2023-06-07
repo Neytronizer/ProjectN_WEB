@@ -42,7 +42,6 @@
                         Illo, necessitatibus dicta? Delectus debitis ipsum consequatur quis quo? Expedita molestias illum aliquid quae eos illo distinctio? Unde repellat harum illum aut veniam rem temporibus nostrum, reiciendis cumque sequi maiores!
                     </p>
                 </div>
-                
                 <div class="user__profile__inner__statistics">
                     <h1 class="user__profile__inner__statistics__title">Statistics</h1>
                     <div class="user__about_line"></div>
@@ -55,7 +54,6 @@
                         </div>
                     </div>
                 </div>
-            
             </div>
         </div>
     </div>

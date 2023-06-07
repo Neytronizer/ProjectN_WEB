@@ -1,5 +1,5 @@
 <?php
-    include('..static/php/db_connect.php');
+    require_once('config/db_connect.php');
 
     if(isset($_POST["log in"])){
         $login = $_POST['login'];
@@ -23,30 +23,25 @@
     }
 ?>
 
-
-
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="stylesheet" href="../static/css/popups.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/popups.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="website icon" type="png" href="./images/monkey3.jpg">
+    <link rel="website icon" type="png" href="/images/Logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <title>Document</title>
+    <title>ProjectN</title>
 </head>
-
 <body>
     <header>
         <div class="header content">
             <div class="header__left">
-                <img class="header__left__nav__icon" src="../static/images/Logo.png" alt="">
+                <img class="header__left__nav__icon" src="/images/Logo.png" alt="">
                 <nav class="header__left__nav">
                     <h3 class="header__left__nav__elem">About</h3>
                     <h3 class="header__left__nav__elem">News</h3>
@@ -59,13 +54,13 @@
                         <p style="color: white; padding: 10px;">or</p>
                     <p class="header__registration__login__button" onclick="showPopup()">SIGN IN</p>
                 </div>
-                <img class="header__menu__icon" src="../static/images/Menu.png" alt="">
+                <img class="header__menu__icon" src="/images/Menu.png" alt="">
             </div>
         </div>
     </header>
     <div class="download__block">
         <div class="download__block__title">
-            <img src="../static/images/Logo.png" alt="">
+            <img src="/images/Logo.png" alt="">
             <h2>StationX</h2>
         </div>
         <div class="download__block__download">
@@ -83,7 +78,7 @@
         <div class="content">
             <div class="about__title">
                 <div class="about__title__inner">
-                    <img src="../static/images/Logo.png" alt="">
+                    <img src="/images/Logo.png" alt="">
                     <h1>About the game</h1>
                 </div>
             </div>
@@ -109,21 +104,21 @@
             <div class="about__screenshots">
                 <div class="about__screenshots__image">
                     <button id="SliderArrowLeft" class="about__screenshots__slider__arrow">
-                        <img src="../static/images/sliderArrow.svg" alt="">
+                        <img src="/images/sliderArrow.svg" alt="">
                     </button>
                     <div class="about__screenshots__slider__items">
                         <div class="about__screenshots__slider__items__item">
-                            <img class="about__screenshots__screenshot" src="../static/images/monkey.jpg" alt="">
+                            <img class="about__screenshots__screenshot" src="/images/monkey.jpg" alt="">
                         </div>
                         <div class="about__screenshots__slider__items__item">
-                            <img class="about__screenshots__screenshot" src="../static/images/monkey2.jpg" alt="">
+                            <img class="about__screenshots__screenshot" src="./images/monkey2.jpg" alt="">
                         </div>
                         <div class="about__screenshots__slider__items__item">
-                            <img class="about__screenshots__screenshot" src="../static/images/monkey3.jpg" alt="">
+                            <img class="about__screenshots__screenshot" src="/images/monkey3.jpg" alt="">
                         </div>
                     </div>
                     <button id="SliderArrowRigth" class="about__screenshots__slider__arrow">
-                        <img src="../static/images/sliderArrow.svg" alt="">
+                        <img src="/images/sliderArrow.svg" alt="">
                     </button>
                 </div>
                 <div class="about__screenshots__slider">
@@ -188,7 +183,7 @@
             </div>
         </div>
     </div>
-    <script src="../static/js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
