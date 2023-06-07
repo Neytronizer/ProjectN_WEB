@@ -1,5 +1,15 @@
 <?php
-    require_once('config/db_connect.php');
+    require_once('config/connect.php');
+    require_once('vendor/userStatus.php');
+    session_start();
+    $user;
+
+    if (isset($_SESSION['user'])){
+        $user = $_SESSION['user'];
+    } 
+    else {
+        $user = new User();
+    }
 ?>
 <html lang="en">
 <head>
@@ -25,11 +35,16 @@
                     <h3 class="header__left__nav__elem">Download</h3>
                 </nav>
             </div>
-            <div class="header__authorization">
-                <h2 class="header__authorization__button" id="loginButton">SIGN UP</h2>
+            <?php printf("$user->isUserLogined");?>
+            <?php if($user->isUserLogined) : ?>
+                <div>test</div>
+            <?php else : ?>
+                <div class="header__authorization">
+                    <h2 class="header__authorization__button" id="loginButton">SIGN UP</h2>
                     <h2>or</h2>
-                <h2 class="header__authorization__button" id="registrationButton">SIGN IN</h2>
-            </div>
+                    <h2 class="header__authorization__button" id="registrationButton">SIGN IN</h2>
+                </div>
+            <?php endif; ?>
         </div>
     </header>
     <div class="download__block">
@@ -46,7 +61,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="about">
         <div class="content">
@@ -95,8 +109,7 @@
                         <img src="/images/sliderArrow.svg" alt="">
                     </button>
                 </div>
-                <div class="about__screenshots__slider">
-                </div>
+                <div class="about__screenshots__slider"></div>
             </div>
         </div>
     </div>

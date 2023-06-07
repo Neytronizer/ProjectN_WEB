@@ -5,7 +5,7 @@ class User{
     private $userID = null;
     private $nickname = null;
     private $email = null;
-    private $isUserAdmin = null;
+    private $isUserAdmin = 0;
 
     public function __construct()
     {

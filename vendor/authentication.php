@@ -21,37 +21,39 @@
             $nickname = $_POST['nickname'];
             $login = $_POST['login'];
             $password = $_POST['password'];
-            $passwordCheck = $_POST['passwordCheck'];
 
-            if($password != $passwordCheck){
-                header("Location: /");
-                exit;
-            }
+            // if($password != $passwordCheck){
+            //     header("Location: /");
+            //     exit;
+            // }
     
             $sqlQuery = 
-            "INSERT INTO `users` (`login`, `password`, `nickname`, `email`, `isAdmin`) 
-            VALUES('$login', '$password', '$nickname', '$email', '0')";
+            "INSERT INTO `users` (`login`, `password`, `nickname`, `email`) 
+            VALUES('$login', '$password', '$nickname', '$email')";
 
             mysqli_query($connect, $sqlQuery);
         }
-        if($_POST['isRegistrationRequest'] === "false"){
+        else if($_POST['isRegistrationRequest'] === "false"){
             $login = $_POST['login'];
             $password = $_POST['password'];
-    
-            $result = mysqli_query($connect, "SELECT * FROM users WHERE login='$login' AND password='$password'");
-            $userData = mysqli_fetch_assoc($result);
+
+            $sqlQuery = 
+            "SELECT * FROM `users` 
+            WHERE `login`='$login' AND `password`='$password'";
             
             if($result->num_rows > 0){
                 $user->isUserLogined = true;
                 $user->SetUserData($userData);
                 $_SESSION['user'] = $user;
+
+                print("$user->isUserLogined");
             }
         }
     }
 
     function LogoutUser($user){
         $user->isUserLogined = false;
-        $_SESSION['user'];
+        $_SESSION['user'] = $user;
     }
     header("Location: " . $_SERVER['HTTP_REFERER']);
     exit;
