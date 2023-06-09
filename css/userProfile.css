@@ -2,7 +2,8 @@
 .profile{
     padding-top: 20px;
     position: relative;
-    height: 100vh;
+
+    min-height: 100vh;
 
     background: url(/images/ProfileTheme3.png);
     background-size: cover;
@@ -23,6 +24,8 @@
     background-color: rgba(32, 32, 32, 0.9);
     border-radius: 10px;
     color: white;
+
+    padding: 10px;
 }
 .profile__window__block__title{
     padding-top: 5px;
@@ -100,4 +103,62 @@
 .profile__window__block__statistic__elem__value{
     font-size: small;
     color:#ff9999;
+}
+/* ADMIN PROFILE */
+.admin__devlogs{
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 10px 5px;
+}
+.admin__devlogs__options{
+    border: solid 1px #00000070;
+    border-radius: 25px;
+
+    padding: 15px 10px;
+
+    cursor: pointer;
+}
+.admin__devlog__create{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    
+    text-align: center;
+    
+    width: 50%;
+
+    margin: auto;
+
+    gap: 10px;
+}
+.admin__devlog__create__input{
+    background-color: rgb(70, 70, 70);;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 10px 5px;
+
+    text-transform: capitalize;
+
+    color: #fff;
+    font-size: 24px;
+}
+.admin__devlog__create input[type="text"]{
+    min-height: 20px;
+}
+.admin__devlog__create input[type="submit"]{
+    margin: auto;
+
+    background-color: green;
+
+    width: fit-content;
+
+    cursor: pointer;
+
+    transition: ease-in 0.2s;
+}
+.admin__devlog__create input[type="submit"]:hover{
+    padding: 10px 15px;
 }

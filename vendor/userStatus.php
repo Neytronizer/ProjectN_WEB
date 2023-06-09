@@ -6,6 +6,7 @@ class User{
     private $nickname = null;
     private $email = null;
     private $isUserAdmin = 0;
+    private $pathToAvatar = null;
 
     public function __construct()
     {
@@ -18,6 +19,7 @@ class User{
         $this->nickname = $userData['nickname'];
         $this->email = $userData['email'];
         $this->isUserAdmin = $userData['isAdmin'];
+        $this->pathToAvatar = $userData['pathToAvatarImage'];
     }
 
     public function GetNickname(){
@@ -29,6 +31,9 @@ class User{
     }
     public function IsUserAdmin(){
         return $this->isUserAdmin;
+    }
+    public function GetPathToAvatar(){
+        return $this->pathToAvatar;
     }
 }
 ?>

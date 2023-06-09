@@ -88,7 +88,24 @@ header{
     border-bottom: rgba(29, 140, 165, 1) solid 2px;
 }
 .header__user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     color: white;
+}
+.header__user__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: right;
+
+    gap: 5px;
+}
+.header__user__avatar{
+    width: 100px;
+    height: 100px;
 }
 .header__authorization{
     display: flex;
@@ -102,6 +119,8 @@ header{
     font-size: 16px;
 }
 .header__authorization__button{
+    text-transform: capitalize;
+
     cursor: pointer;
 }
 .header__authorization__button:hover{
@@ -117,6 +136,11 @@ header{
     width: 30px;
     height: 22px;
 }
+/*
+=================
+ABOUT
+=================
+*/
 .about{
     min-height: 100vh;
     width: 100%;
@@ -234,38 +258,89 @@ header{
     background-color: white;
     border-radius: 100%;
 }
-.article__block{
+/*
+=================
+DOWNLOAD
+=================
+*/
+.download{
+    background-color: black;
+    position: relative;
+    color:white;    
+}
+.download__header{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: -25px;
+}
+
+.download__header img{
+    width: 175px;
+    height: 175px;
+}
+
+.download__block{
+    margin:auto;
+    max-width: max-content;
+    padding: 350px 0;
+}
+.download__block__title{
+    font-weight: 400;
+    font-size: 115px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.download__block__button{
+    background-color: rgba(69, 69, 69, 0.57);
+    border-radius: 50px;
+    padding:20px 60px;
+    width: min-content;
+    margin:auto;
+    text-align: center;
+}
+
+.download__block__button a{
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.download__block__button h5{
+    font-size: 10px;
+    font-weight: 100;
+}
+/*
+=================
+DEVLOGS
+=================
+*/
+.devlogs{
 
     min-height: 200vh;
     background-image: url(/images/ArticleBlockBackground.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+.devlogs__title{
+    color: #fff;
+    font-size: 48px;
 
+    text-align: center;
+}
 .line{
     border-bottom: 1px solid #616161;
     padding: 0.5px 0;
     width: 95%;
     margin: auto;
 }
-.article__block__title{
-    color: white;
+.devlog__block {
+    width: 80%;
 
-
-    padding: 125px 0 0;
-
-    font-weight: 400;
-    font-size: 100px;
-
-    text-align: left;
-}
-
-.article__block__elem {
-    min-height: 110px;
-    width: 60%;
+    margin: 0 auto;
+    padding: 15px 20px;
 
     display: flex;
-    justify-content: space-between;
 
     color: white;
 
@@ -274,12 +349,15 @@ header{
     margin-top: 110px;
 
     border-radius: 15px;
-    
 }
-.article__block__elem__inner{
-    padding: 15px 20px;
+.devlog__block__inner{
     width: 100%;
-
+}
+.devlog__block__title{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 24px;
+    text-align: left;
 }
 .article__block__elem__list{
     padding: 15px 30px 0;
@@ -299,51 +377,4 @@ header{
     justify-content: right;
     font-size: 10px;
     font-weight: 200;
-}
-.download__block{
-    background-color: black;
-    position: relative;
-    color:white;    
-}
-.download__block__title{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: -25px;
-}
-
-.download__block__title img{
-    width: 175px;
-    height: 175px;
-}
-
-.download__block__download{
-    margin:auto;
-    max-width: max-content;
-    padding: 350px 0;
-}
-.download__block__playsign{
-    font-weight: 400;
-    font-size: 115px;
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-.download__block__button{
-    background-color: rgba(69, 69, 69, 0.57);
-    border-radius: 50px;
-    padding:20px 60px;
-    width: min-content;
-    margin:auto;
-    text-align: center;
-}
-
-.download__block__button h1{
-    font-size: 40px;
-    font-weight: 200;
-}
-
-.download__block__button h5{
-    font-size: 10px;
-    font-weight: 100;
 }

@@ -7,6 +7,11 @@
     if (isset($_SESSION['user'])){
         $user = $_SESSION['user'];
     }
+
+
+    $sqlQuery = "SELECT * FROM `devlogs`";
+    $devlogs = mysqli_query($connect,$sqlQuery);
+    $devlogs = mysqli_fetch_all($devlogs);
 ?>
 <html lang="en">
 <head>
@@ -34,9 +39,19 @@
             </div>
             <?php if($user->isUserLogined) : ?>
                 <div class="header__user">
-                    <a href="/views/pages/userProfile.php" class="header__authorization__button"><?= $user->GetNickname()?></a>
-                    <!-- <img src="/images/Logo.png" alt="" class="header__user__avatar"> -->
-                    <a href="/vendor/authentication.php" class="header__authorization__button">Log out</a>
+                    <?php if($user->GetPathToAvatar() != null) : ?>
+                        <img src="/uploads/avatars/<?= $user->GetPathToAvatar(); ?>" alt="" class="header__user__avatar">
+                    <?php endif; ?>
+                    <div class="header__user__inner">
+                        <?php if(!$user->IsUserAdmin()) : ?> 
+                            <a href="/views/pages/userProfile.php">
+                                Welcome, <span class="header__authorization__button"><?= $user->GetNickname() ?></span>
+                            </a>
+                        <?php else: ?>
+                            <a href="/views/pages/adminProfile.php" class="header__authorization__button">Welcome, <?= $user->GetNickname()?></a>
+                        <?php endif; ?>
+                        <a href="/vendor/authentication.php" class="header__authorization__button">Log out</a>
+                    </div>
                 </div>
             <?php else : ?>
                 <div class="header__authorization">
@@ -47,22 +62,20 @@
             <?php endif; ?>
         </div>
     </header>
-    <div class="download__block">
-        <div class="download__block__title">
+    <section class="download">
+        <div class="download__header">
             <img src="/images/Logo.png" alt="">
             <h2>StationX</h2>
         </div>
-        <div class="download__block__download">
-            <h1 class="download__block__playsign">PLAY NOW</h1>
-            <div class="download__block__button" download>
-                <div class="download__block__text">
-                    <h1>DOWNLOAD</h1>
-                    <h5>(150MB)</h5>
-                </div>
+        <div class="download__block">
+            <h1 class="download__block__title">PLAY NOW</h1>
+            <div class="download__block__button">
+                <a href="/vendor/downloadGame.php">DOWNLOAD</a>
+                <h5>(25MB)</h5>
             </div>
         </div>
-    </div>
-    <div class="about">
+    </section>
+    <section class="about">
         <div class="content">
             <div class="about__title">
                 <div class="about__title__inner">
@@ -112,40 +125,27 @@
                 <div class="about__screenshots__slider"></div>
             </div>
         </div>
-    </div>
-    <div class="article__block">
-        <div class="">
-            <div class="article__block__lines content">
-                <h1 class="article__block__title">What's new</h1>
-            </div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="content">
-                <div class="article__block__elem">
-                    <div class="article__block__elem__inner">
-                        <h3 class="article__block__elem__title">NEW UPDATE!</h3>
-                        <ul class="article__block__elem__list">
-                            <li>
-                                <p>New weapons</p>
-                            </li>
-                            <li>
-                                <p>New levels</p>
-                            </li>
-                            <li>
-                                <p>New items</p>
-                            </li>
-                            <li>
-                                <p>New content</p>
-                            </li>
-                        </ul>
+    </section>
+    <section class="devlogs">
+        <h1 class="devlogs__title">What's new</h1>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="content">
+            <?php foreach($devlogs as $devlog):?>
+                <div class="devlog__block">
+                    <div class="devlog__block__inner">
+                        <h3 class="devlog__block__title"><?= $devlog[1]?></h3>
+                        <p>
+                            <?= $devlog[2] ?>
+                        </p>
                         <div class="article__block__elem__date">
-                            <h4>Sep 3</h4>
+                            <h4><?= $devlog[3]?></h4>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
         </div>
-    </div>
+    </section>
     <?php include('views/templates/loginPopup.php')?>
     <?php include('views/templates/registrationPopup.php')?>
     <script src="/js/script.js"></script>
