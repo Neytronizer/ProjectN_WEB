@@ -162,3 +162,27 @@
 .admin__devlog__create input[type="submit"]:hover{
     padding: 10px 15px;
 }
+.admin__devlog__edit{
+    display: none;
+    flex-direction: column;
+
+    padding: 5px 10px;
+
+    gap: 10px;
+}
+.admin__devlog__edit__block{
+    display: flex;
+    justify-content: space-between;
+}
+.admin__devlog__edit__block__delete{
+    background-color: red;
+
+    border: none;
+    border-radius: 25px;
+
+    color: #fff;
+
+    padding: 10px 5px;
+
+    cursor: pointer;
+}

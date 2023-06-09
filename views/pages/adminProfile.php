@@ -16,6 +16,12 @@
 
     $userData = mysqli_query($connect, $sqlQuery);
     $userData = mysqli_fetch_assoc($userData);
+
+    $sqlQuery = 
+    "SELECT * FROM `devlogs`";
+
+    $devlogs = mysqli_query($connect,$sqlQuery);
+    $devlogs = mysqli_fetch_all($devlogs);
 ?>
 
 <!DOCTYPE html>
@@ -60,8 +66,14 @@
                     <textarea class="admin__devlog__create__input" name="text" id="text"></textarea>
                     <input class="admin__devlog__create__input" type="submit" value="Create">
                 </form>
-                <div id="editBlock">
-
+                <div class="admin__devlog__edit" id="editBlock">
+                    <?php foreach($devlogs as $devlog) : ?>
+                        <div class="admin__devlog__edit__block">
+                            <h1><?= $devlog[1]?> </h1>
+                            <h1>Date: <?= $devlog[3]?></h1>
+                            <a href="../../vendor/deleteDevlog.php?id=<?=$devlog[0]?>" class="admin__devlog__edit__block__delete">Delete</a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </section>
         </div>
