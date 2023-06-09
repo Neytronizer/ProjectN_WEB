@@ -63,7 +63,7 @@
                     <label for="title">Title</label>
                     <input class="admin__devlog__create__input" type="text" id="title" name="title">
                     <label for="text">Text</label>
-                    <textarea class="admin__devlog__create__input" name="text" id="text"></textarea>
+                    <textarea class="admin__devlog__create__input" name="text" id="text" cols="100" rows="10"></textarea>
                     <input class="admin__devlog__create__input" type="submit" value="Create">
                 </form>
                 <div class="admin__devlog__edit" id="editBlock">

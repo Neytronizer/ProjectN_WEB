@@ -8,10 +8,17 @@ body{
     font-family: 'Trispace', sans-serif;
 
     box-sizing: border-box;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 a{
     text-decoration: none;
     color: #fff;
+}
+textarea{
+    resize: vertical;
 }
 .content{
     max-width: 85%;
@@ -316,11 +323,18 @@ DEVLOGS
 =================
 */
 .devlogs{
-
-    min-height: 200vh;
+    min-height: 100vh;
     background-image: url(/images/ArticleBlockBackground.svg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+.devlog__blocks{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 25px;
+
+    gap: 25px;
 }
 .devlogs__title{
     color: #fff;
@@ -345,8 +359,6 @@ DEVLOGS
     color: white;
 
     background-color: rgba(57, 57, 57, 0.7);
-
-    margin-top: 110px;
 
     border-radius: 15px;
 }
@@ -377,4 +389,7 @@ DEVLOGS
     justify-content: right;
     font-size: 10px;
     font-weight: 200;
+}
+.devlog__page{
+    padding: 100px;
 }

@@ -130,19 +130,16 @@
         <h1 class="devlogs__title">What's new</h1>
         <div class="line"></div>
         <div class="line"></div>
-        <div class="content">
+        <div class="devlog__blocks content">
             <?php foreach($devlogs as $devlog):?>
-                <div class="devlog__block">
+                <a href="/views/pages/devlogPage.php?devlogID=<?=$devlog[0]?>"class="devlog__block">
                     <div class="devlog__block__inner">
                         <h3 class="devlog__block__title"><?= $devlog[1]?></h3>
-                        <p>
-                            <?= $devlog[2] ?>
-                        </p>
                         <div class="article__block__elem__date">
                             <h4><?= $devlog[3]?></h4>
                         </div>
                     </div>
-                </div>
+                </a>
             <?php endforeach; ?>
         </div>
     </section>
