@@ -45,7 +45,10 @@
                     <div class="header__user__inner">
                         <?php if(!$user->IsUserAdmin()) : ?> 
                             <a href="/views/pages/userProfile.php">
-                                Welcome, <span class="header__authorization__button"><?= $user->GetNickname() ?></span>
+                                Welcome, 
+                                <span class="header__authorization__button">
+                                    <?= $user->GetNickname() ?>
+                                </span>
                             </a>
                         <?php else: ?>
                             <a href="/views/pages/adminProfile.php" class="header__authorization__button">Welcome, <?= $user->GetNickname()?></a>
