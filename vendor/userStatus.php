@@ -24,7 +24,7 @@ class User{
         return $this->nickname;
     }
     
-    public function GetUserID(){
+    public function GetID(){
         return $this->userID;
     }
     public function IsUserAdmin(){

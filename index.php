@@ -2,13 +2,10 @@
     require_once('config/connect.php');
     require_once('vendor/userStatus.php');
     session_start();
-    $user;
+    $user = new User();
 
     if (isset($_SESSION['user'])){
         $user = $_SESSION['user'];
-    } 
-    else {
-        $user = new User();
     }
 ?>
 <html lang="en">
@@ -35,9 +32,12 @@
                     <h3 class="header__left__nav__elem">Download</h3>
                 </nav>
             </div>
-            <?php printf("$user->isUserLogined");?>
             <?php if($user->isUserLogined) : ?>
-                <div>test</div>
+                <div class="header__user">
+                    <a href="/views/pages/userProfile.php" class="header__authorization__button"><?= $user->GetNickname()?></a>
+                    <!-- <img src="/images/Logo.png" alt="" class="header__user__avatar"> -->
+                    <a href="/vendor/authentication.php" class="header__authorization__button">Log out</a>
+                </div>
             <?php else : ?>
                 <div class="header__authorization">
                     <h2 class="header__authorization__button" id="loginButton">SIGN UP</h2>

@@ -2,14 +2,11 @@
     require_once '../config/connect.php';
     require 'userStatus.php';
     session_start();
-    $user;
+    $user = new User();;
 
     if (isset($_SESSION['user'])){
         $user = $_SESSION['user'];
     } 
-    else {
-        $user = new User();
-    }
 
     if($user->isUserLogined){
         LogoutUser($user);
@@ -40,13 +37,14 @@
             $sqlQuery = 
             "SELECT * FROM `users` 
             WHERE `login`='$login' AND `password`='$password'";
+
+            $result = mysqli_query($connect, $sqlQuery);
+            $userData = mysqli_fetch_assoc($result);
             
             if($result->num_rows > 0){
                 $user->isUserLogined = true;
                 $user->SetUserData($userData);
                 $_SESSION['user'] = $user;
-
-                print("$user->isUserLogined");
             }
         }
     }
