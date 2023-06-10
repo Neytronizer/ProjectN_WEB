@@ -37,19 +37,21 @@
 }
 /* HEADER */
 .profile__window__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     padding: 15px;
 
     background-color: rgba(32, 32, 32, 0.9);
     border-radius: 10px;
-    display: flex;
 }
 .profile__window__header__inner{
-    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-    padding-left: 45px;
-    padding-top: 25px;
-    
-    flex-direction: bottom;
+    text-transform: capitalize;
 }
 .profile__picture{
     width: 167px;
@@ -59,18 +61,6 @@
 }
 .profile__window__header__inner__name{
     color: rgb(105, 188, 226);
-    font-size: larger;
-}
-.profile__window__header__inner__reputation{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    gap: 5px;
-}
-.profile__window__header__inner__reputation__title{
-    color: white;
-    font-weight: 200;
     font-size: larger;
 }
 /* ABOUT */
@@ -185,4 +175,17 @@
     padding: 10px 5px;
 
     cursor: pointer;
+}
+/* INPUTS */
+#writeMessageBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: fit-content;
+
+    margin: auto;
+}
+.message__text{
+    text-align: left;
 }

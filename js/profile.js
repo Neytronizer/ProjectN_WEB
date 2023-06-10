@@ -1,9 +1,11 @@
 //Buttons
 const createDevlogButton = document.getElementById('createDevlog');
 const editDevlogsButton = document.getElementById('editDevlogs');
+const writeMessageButton = document.getElementById('writeMessage');
 //Blocks
 const createBlock = document.getElementById('createBlock');
 const editBlock = document.getElementById('editBlock');
+const writeMessageBlock = document.getElementById('writeMessageBlock');
 
 if(createDevlogButton != null){
     createDevlogButton.onclick = function(event){

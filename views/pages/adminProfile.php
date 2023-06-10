@@ -44,15 +44,8 @@
                     <h1 class="profile__window__header__inner__name"><?= $userData['nickname']?></h1>
                 </div>
             </section>
-            <section class="profile__window__block">
-                <h1 class="profile__window__block__title">Statistics</h1>
-                <div class="profile__window__block__statistic">
-                    <div class="profile__window__block__statistic__elem">
-                        <h5>Join date</h5>
-                        <h3 class="profile__window__block__statistic__elem__value"><?= $userData['registrationDate']?></h3>
-                    </div>
-                </div>
-            </section>
+            <?php include("../templates/profile/statisticsBlock.php")?>
+            <?php include("../templates/profile/messagesBlock.php");?>
             <section class="profile__window__block">
                 <h1 class="profile__window__block__title">Devlogs</h1>
                 <nav class="admin__devlogs">
