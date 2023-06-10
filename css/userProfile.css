@@ -178,7 +178,7 @@
 }
 /* INPUTS */
 #writeMessageBlock{
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 20px;
 
@@ -186,6 +186,25 @@
 
     margin: auto;
 }
+.message{
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    width: 100%;
+}
+.message__nickname{
+    text-align: left;
+    text-transform: capitalize;
+}
 .message__text{
     text-align: left;
+    overflow-wrap: break-word;
+
+    border-bottom: solid 2px #616161;
+    padding-bottom: 20px;
+}
+#checkMessagesBlock{
+    display: none;
 }

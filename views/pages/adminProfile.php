@@ -38,12 +38,7 @@
 <body>
     <main class="profile">
         <div class="profile__window">
-            <section class="profile__window__header">
-                <img src="/uploads/avatars/<?= $userData['pathToAvatarImage'] ?>" class="profile__picture">
-                <div class="profile__window__header__inner">
-                    <h1 class="profile__window__header__inner__name"><?= $userData['nickname']?></h1>
-                </div>
-            </section>
+            <?php include("../templates/profile/header.php")?>
             <?php include("../templates/profile/statisticsBlock.php")?>
             <?php include("../templates/profile/messagesBlock.php");?>
             <section class="profile__window__block">

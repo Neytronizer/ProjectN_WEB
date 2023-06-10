@@ -65,7 +65,7 @@
                             $userData = mysqli_fetch_assoc($userData);
                         ?>
                         <div class="comment__header">
-                            <img class="comment__avatar" src="../../uploads/avatars/<?=$userData['pathToAvatarImage']?>" alt="">
+                            <img class="comment__avatar" src="../../<?=$userData['pathToAvatarImage']?>" alt="">
                             <h1 class="comment__nickname">
                                 <?= $userData['nickname'] ?>
                             </h1>

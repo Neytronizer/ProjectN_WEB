@@ -19,8 +19,10 @@
                     $result = mysqli_query($connect, $sqlQuery);
                     $result = mysqli_fetch_assoc($result);
                 ?>
-                <h1><?= $result['nickname']?></h1>
-                <p class="message__text"><?= $message[1]?></p>
+                <div class="message">
+                    <h1 class="message__nickname"><?= $result['nickname']?></h1>
+                    <p class="message__text"><?= $message[1]?></p>
+                </div>
             <?php endforeach; ?>
         <?php else :?>
             <h1>There is no messages!</h1>
